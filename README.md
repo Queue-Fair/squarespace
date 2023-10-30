@@ -58,9 +58,8 @@ So, here's how to add CloudFront to your SquareSpace site and run the Queue-Fair
 
 **4.**  Now just click Save & Deploy, and that's it you've set up Cloudfront for your SquareSpace site!  Well done you!  However, Cloudfront will not be called until you add it to your request routing.  There are two ways of doing this.
 
-    * If you DO have Use "www" Prefix enabled in your SquareSpace domain settings, it's super easy - just change the CNAME record for www at your DNS provider to the Distribution Domain Name, which is a long string of letters and numbers followed by .cloudfront.net that you can see on the Distributions page, such as e2slh2uy2m89es.cloudfront.net - we recommend you set the TTL on this record to five minutes or less, so you can revert changes quickly.
-    
-    * If you DON'T have Use "www" Prefix enabled im myour SquareSpace domain settings, it's a little more tricky - you need to create a Route 53 record for your main domain.  The instructions are at https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html
+    - If you DO have Use "www" Prefix enabled in your SquareSpace domain settings, it's super easy - just change the CNAME record for www at your DNS provider to the Distribution Domain Name, which is a long string of letters and numbers followed by .cloudfront.net that you can see on the Distributions page, such as e2slh2uy2m89es.cloudfront.net - we recommend you set the TTL on this record to five minutes or less, so you can revert changes quickly.
+    - If you DON'T have Use "www" Prefix enabled im myour SquareSpace domain settings, it's a little more tricky - you need to create a Route 53 record for your main domain.  The instructions are at https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html
 
 **5.**  Once any TTL has timed out on your old records, check that Cloudfront is active on your SquareSpace site.  You can do this by right-clicking, inspect and the Network tab.  Your page requests should have additional headers in the response with the letters "cf" - once you see that, Cloudfront is in the request route and it's working.
 
