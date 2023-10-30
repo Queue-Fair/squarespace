@@ -54,6 +54,14 @@ So, here's how to add CloudFront to your SquareSpace site and run the Queue-Fair
 *Settings*
    * Alternate domain name - add your domain both with and without the www, so both mycompany.com and www.mycompany.com, one domain per item.
    * You will probably want Amazon to create the certificate for you, so hit Request certificate.  This will open a new tab.  Request a public certificate, Next.  Add both names (with and without the `www.`) to the certificate, one domain per item,
- and perform the DNS validation.  On the page that follows, you will see Certificate status, and two CNAMEs that must be added to your DNS provider for Amazon to issue the certificate.  Once they have been added, it will take a few minutes for Amazon to create the certificate, and you can check  when it's done by refreshing the page.  Have a cup of tea.  When the Status becomes Issued with a green tick, go back to the other tab, hit the Refresh icon next to `Choose certificate` and select your newly-created certificate from the pulldown. 
+ and perform the DNS validation.  On the page that follows, you will see Certificate status, and two CNAMEs that must be added to your DNS provider for Amazon to issue the certificate.  Once they have been added, it will take a few minutes for Amazon to create the certificate, and you can check  when it's done by refreshing the page.  Have a cup of tea.  When the Status becomes Issued with a green tick, go back to the other tab, hit the Refresh icon next to `Choose certificate` and select your newly-created certificate from the pulldown.
+
+**4.**  Now just click Save & Deploy, and that's it you've set up Cloudfront for your SquareSpace site!  Well done you!  However, Cloudfront will not be called until you add it to your request routing.  There are two ways of doing this.
+    * If you DO have `Use "www" prefix` enabled in your SquareSpace domain settings, it's super easy - just change the CNAME record for www at your DNS provider to the Distribution Domain Name, which is a long string of letters and numbers followed by .cloudfront.net that you can see on the Distributions page, such as `e2slh2uy2m89es.cloudfront.net` - we recommend you set the TTL on this record to five minutes or less, so you can revert changes quickly.
+    * If you DON'T have `Use "www" prefix` enabled im myour SquareSpace domain settings, it's a little more tricky - you need to create a Route 53 record for your main domain.  The instructions are at https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html
+
+**5.**  Once any TTL has timed out on your old records, check that Cloudfront is active on your SquareSpace site.  You can do this by right-clicking, inspect and the Network tab.  Your page requests should have additional headers in the response with the letters "cf" - once you see that, Cloudfront is in the request route and it's working.
+
+**6.**  Now you are ready to install the Cloudfront Adapter as described at https://github.com/queue-fair/cloudfront - start at Step 1 there. 
    
  
