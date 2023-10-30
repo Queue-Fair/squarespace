@@ -23,4 +23,8 @@ You shoud now see the Adapter tag when you perform View Source after refreshing 
 
 And you're done!  Your queues and activation rules can now be configured in the Queue-Fair Portal.
 
-## CloudFlare Network-Edge Adapter
+## SquareSpace Network-Edge Adapter
+Rather than use the Client-Side JavaScript Adapter, some of our SquareSpace clients prefer to take advantage of the additional security features offered by our other Adapters.  It is not possible to use a Server-Side Adapter with a SquareSpace shop as SquareSpace does not support server-side code, but you can use one of our Network-Edge Adapters to make Queue-Fair fully secure and unskippable.
+
+You can try our Cloudflare Adapter at https://github.com/queue-fair/cloudflare , but some customers have reported issues at SquareSpace if `Use "www" prefix` is enabled on your domain settings.  We therefore recommend our Cloudfront Adapter instead for Squarespace site.
+
