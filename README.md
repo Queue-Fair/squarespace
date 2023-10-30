@@ -53,7 +53,7 @@ So, here's how to add CloudFront to your SquareSpace site and run the Queue-Fair
 
 *Settings*
    * Alternate domain name - add your domain both with and without the www, so both mycompany.com and www.mycompany.com
-   * You will probably want Amazon to create the certificate for you, hit Request certificate.  This will open a new tab.  Request a public certificate, Next.  Add both names (with and without the www.) to the certificate
+   * You will probably want Amazon to create the certificate for you, so hit Request certificate.  This will open a new tab.  Request a public certificate, Next.  Add both names (with and without the www.) to the certificate
  and perform the DNS validation.  On the page that follows, you will see Certificate status, and two CNAMEs that must be added to your DNS provider for Amazon to issue the certificate.  Once they have been added, it will take a few minutes for Amazon to create the certificate, and you can check  when it's done by refreshing the page.  Have a cup of tea.  When the Status becomes Issued with a green tick, go back to the other tab, hit the Refresh icon next to `Choose certificate` and select your newly-created certificate from the pulldown. 
    
  
