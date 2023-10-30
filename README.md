@@ -64,6 +64,6 @@ If you DON'T have Use "www" Prefix enabled in your SquareSpace domain settings, 
 
 **5.**  Once any TTL has timed out on your old records, check that Cloudfront is active on your SquareSpace site.  You can do this by right-clicking, inspect and the Network tab.  Your page requests should have additional headers in the response with the letters "cf" in the header names - once you see that, Cloudfront is in the request route and it's working.
 
-**6.**  Now you are ready to install the Cloudfront Adapter as described at https://github.com/queue-fair/cloudfront - start at Step 1 there. 
+**6.**  Now you are ready to install the Cloudfront Adapter as described at https://github.com/queue-fair/cloudfront - start at Step 1 there. When you get to Step 15, it is normal to create an exclusion cache behaviour /api* so that the Queue-Fair Adapter does not run on SquareSpace API requests. 
    
  
