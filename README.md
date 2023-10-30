@@ -36,24 +36,24 @@ So, here's how to add CloudFront to your SquareSpace site and run the Queue-Fair
 
 **3.**  You can leave the default settings apart from:
 *Origin*
-   Origin Domain must be set to `ext-cust.squarespace.com`
-   Protocol should be Https Only
-   Name should be `mycompany.com`, the domain you use for your SquareSpace site, without any www. at the front
+   * Origin Domain must be set to `ext-cust.squarespace.com`
+   * Protocol should be Https Only
+   * Name should be `mycompany.com`, the domain you use for your SquareSpace site, without any www. at the front
    
 *Default cache behaviour*
-   Allowed HTTP methods should be everything - GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE
-   Cache policy should be CachingDisabled - you don't need or want caching on your SquareSpace site, as SquareSpace has its own CDN.
-   Origin request policy should be AllViewer.
+   * Allowed HTTP methods should be everything - GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE
+   * Cache policy should be CachingDisabled - you don't need or want caching on your SquareSpace site, as SquareSpace has its own CDN.
+   * Origin request policy should be AllViewer.
    
 *Function associations*
-   Leave set to `No association` for now.
+   * Leave set to `No association` for now.
 
 *Web Application Firewall (WAF)*
-   Do not enable.
+   * Do not enable.
 
 *Settings*
-   Alternate domain name - add your domain both with and without the www, so both mycompany.com and www.mycompany.com
-   You will probably want Amazon to create the certificate for you, hit Request certificate.  This will open a new tab.  Request a public certificate, Next.  Add both names (with and without the www.) to the certificate
+   * Alternate domain name - add your domain both with and without the www, so both mycompany.com and www.mycompany.com
+   * You will probably want Amazon to create the certificate for you, hit Request certificate.  This will open a new tab.  Request a public certificate, Next.  Add both names (with and without the www.) to the certificate
  and perform the DNS validation.  On the page that follows, you will see Certificate status, and two CNAMEs that must be added to your DNS provider for Amazon to issue the certificate.  Once they have been added, it will take a few minutes for Amazon to create the certificate, and you can check  when it's done by refreshing the page.  Have a cup of tea.  When the Status becomes Issued with a green tick, go back to the other tab, hit the Refresh icon next to `Choose certificate` and select your newly-created certificate from the pulldown. 
    
  
