@@ -35,6 +35,7 @@ So, here's how to add CloudFront to your SquareSpace site and run the Queue-Fair
 **2.**  Log in to your AWS account.  In the search box at the top left, start typing CloudFront.   Give it a Star so it's pinned to your top nav, and click on it when it appears.  Then you want the big orange Create a CloudFront distribution.
 
 **3.**  You can leave the default settings apart from:
+
 *Origin*
    * Origin Domain must be set to `ext-cust.squarespace.com`
    * Protocol should be Https Only
