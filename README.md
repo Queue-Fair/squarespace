@@ -67,6 +67,6 @@ If you DON'T have Use "www" Prefix enabled in your SquareSpace domain settings, 
 
 **6.**  Now you are ready to install the Cloudfront Adapter as described at https://github.com/queue-fair/cloudfront - start at Step 1 there. When you get to Step 15, it is normal to create an exclusion cache behaviour /api* so that the Queue-Fair Adapter does not run on SquareSpace API requests. 
 
-And that's it! Your done!
+And that's it! You're done!
    
  
